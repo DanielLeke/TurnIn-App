@@ -8,6 +8,7 @@ class StudentsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: studentsAppBar(),
+      body: ListView(),
     );
   }
 

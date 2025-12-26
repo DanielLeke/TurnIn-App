@@ -8,7 +8,10 @@ class StudentsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: studentsAppBar(),
-      body: ListView(children: [CreateSubmissionBtn()]),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: ListView(children: [CreateSubmissionBtn()]),
+      ),
     );
   }
 
@@ -20,7 +23,7 @@ class StudentsPage extends StatelessWidget {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.logout, color: Colors.grey[100]),
+          icon: Icon(Icons.logout, color: Colors.grey),
         ),
       ],
     );

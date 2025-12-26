@@ -10,7 +10,7 @@ class StudentsPage extends StatelessWidget {
       appBar: studentsAppBar(),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
-        child: ListView(children: [CreateSubmissionBtn()]),
+        child: ListView(children: [CreateSubmissionBtn(), NoSubmissionsCard()]),
       ),
     );
   }
@@ -19,7 +19,7 @@ class StudentsPage extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors.white,
       title: Text('My Submissions'),
-      leading: Icon(Icons.insert_drive_file, color: Colors.blue),
+      leading: Icon(Icons.description, color: Colors.blue),
       actions: [
         IconButton(
           onPressed: () {},
@@ -30,26 +30,44 @@ class StudentsPage extends StatelessWidget {
   }
 }
 
+class NoSubmissionsCard extends StatelessWidget {
+  const NoSubmissionsCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white
+      ),
+      child: Column(children: [
+        Icon(Icons.description, color: Colors.grey, size: 80,),
+        Text(
+          "No submissions yet. Create your first submission!",
+          style: TextStyle(
+            color: Colors.grey
+          ),
+        )
+      ]),
+    );
+  }
+}
+
 class CreateSubmissionBtn extends StatelessWidget {
   const CreateSubmissionBtn({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-    onPressed: () {}, 
-    style: ElevatedButton.styleFrom(
-      backgroundColor: Colors.blue,
-      foregroundColor: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(5)
-      )
-    ),
-    child: Text(
-      "+ New Submission",
-      style: TextStyle(
-        color: Colors.white,
-        fontWeight: FontWeight.bold
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       ),
-    ));
+      child: Text(
+        "+ New Submission",
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+      ),
+    );
   }
 }

@@ -10,7 +10,12 @@ class StudentsPage extends StatelessWidget {
       appBar: studentsAppBar(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: ListView(children: [CreateSubmissionBtn(), NoSubmissionsCard()]),
+        child: SizedBox(
+          height: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [CreateSubmissionBtn(), NoSubmissionsCard()]),
+        ),
       ),
     );
   }
@@ -38,7 +43,7 @@ class NoSubmissionsCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(8),
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -65,19 +70,24 @@ class CreateSubmissionBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {},
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blue[700],
-        foregroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-      ),
-      child: Text(
-        "+ New Submission",
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontSize: 15,
+    return SizedBox(
+      height: 43,
+      width: double.infinity,
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.blue[700],
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+        ),
+        child: Text(
+          "+ New Submission",
+          style: TextStyle(
+            letterSpacing: 0.7,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 17,
+          ),
         ),
       ),
     );

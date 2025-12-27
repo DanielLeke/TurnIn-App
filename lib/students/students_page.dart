@@ -9,7 +9,13 @@ class StudentsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: studentsAppBar(),
-      body: NoSubmissionsView(),
+      body: AlertDialog(
+        title: Text("New Submission"),
+        backgroundColor: Colors.white,
+        content: Column(children: [
+          ],
+        ),
+      ),
     );
   }
 
@@ -29,9 +35,7 @@ class StudentsPage extends StatelessWidget {
 }
 
 class NoSubmissionsView extends StatelessWidget {
-  const NoSubmissionsView({
-    super.key,
-  });
+  const NoSubmissionsView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +45,9 @@ class NoSubmissionsView extends StatelessWidget {
         height: 300,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [CreateSubmissionBtn(), NoSubmissionsCard()]),
+          children: [CreateSubmissionBtn(), NoSubmissionsCard()],
+        ),
       ),
     );
   }
 }
-

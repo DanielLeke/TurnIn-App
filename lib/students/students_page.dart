@@ -8,15 +8,7 @@ class StudentsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: studentsAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SizedBox(
-          height: 300,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [CreateSubmissionBtn(), NoSubmissionsCard()]),
-        ),
-      ),
+      body: NoSubmissionsView(),
     );
   }
 
@@ -31,6 +23,25 @@ class StudentsPage extends StatelessWidget {
           icon: Icon(Icons.logout, color: Colors.grey),
         ),
       ],
+    );
+  }
+}
+
+class NoSubmissionsView extends StatelessWidget {
+  const NoSubmissionsView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: SizedBox(
+        height: 300,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [CreateSubmissionBtn(), NoSubmissionsCard()]),
+      ),
     );
   }
 }

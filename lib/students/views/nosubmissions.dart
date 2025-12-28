@@ -49,9 +49,9 @@ class CreateSubmissionBtn extends StatelessWidget {
           "+ New Submission",
           style: TextStyle(
             letterSpacing: 0.7,
-            color: Colors.white,
             fontWeight: FontWeight.bold,
             fontSize: 17,
+            fontFamily: 'Sans Serif'
           ),
         ),
       ),

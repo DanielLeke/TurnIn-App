@@ -10,7 +10,13 @@ class StudentsPage extends StatelessWidget {
       backgroundColor: Colors.grey[100],
       appBar: studentsAppBar(),
       body: AlertDialog(
-        title: Text("New Submission", style: TextStyle(fontFamily: 'Sans Serif', fontWeight: FontWeight.bold),),
+        title: Text(
+          "New Submission",
+          style: TextStyle(
+            fontFamily: 'Sans Serif',
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         backgroundColor: Colors.white,
         content: SubmisssionForm(),
       ),
@@ -33,32 +39,38 @@ class StudentsPage extends StatelessWidget {
 }
 
 class SubmisssionForm extends StatelessWidget {
-  const SubmisssionForm({
-    super.key,
-  });
+  const SubmisssionForm({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Form(child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SubmissionTitle()
-      ],
-    ),);
+    return Form(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [SubmissionTitle()],
+      ),
+    );
   }
 }
 
 class SubmissionTitle extends StatelessWidget {
-  const SubmissionTitle({
-    super.key,
-  });
+  const SubmissionTitle({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Title", style: TextStyle(fontFamily: 'Sans Serif', fontSize: 18),),
+        Text("Title", style: TextStyle(fontFamily: 'Sans Serif', fontSize: 18)),
+        TextFormField(
+          decoration: InputDecoration(border: OutlineInputBorder()),
+          validator: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Title is required';
+            }
+            return null;
+          },
+          onSaved: (newValue) {},
+        ),
       ],
     );
   }

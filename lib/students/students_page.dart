@@ -46,9 +46,20 @@ class SubmisssionForm extends StatelessWidget {
     return Form(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [SubmissionTitle()],
+        children: [SubmissionTitle(), SubmissionContent()],
       ),
     );
+  }
+}
+
+class SubmissionContent extends StatelessWidget {
+  const SubmissionContent({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column();
   }
 }
 

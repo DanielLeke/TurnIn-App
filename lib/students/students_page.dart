@@ -10,7 +10,7 @@ class StudentsPage extends StatelessWidget {
       backgroundColor: Colors.grey[100],
       appBar: studentsAppBar(),
       body: AlertDialog(
-        title: Text("New Submission"),
+        title: Text("New Submission", style: TextStyle(fontFamily: 'Sans Serif', fontWeight: FontWeight.bold),),
         backgroundColor: Colors.white,
         content: SubmisssionForm(),
       ),
@@ -40,8 +40,21 @@ class SubmisssionForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(child: Column(
-      
+      children: [
+        SubmissionTitle()
+      ],
     ),);
+  }
+}
+
+class SubmissionTitle extends StatelessWidget {
+  const SubmissionTitle({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column();
   }
 }
 

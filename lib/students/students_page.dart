@@ -40,6 +40,7 @@ class SubmisssionForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SubmissionTitle()
       ],
@@ -54,7 +55,12 @@ class SubmissionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("Title", style: TextStyle(fontFamily: 'Sans Serif', fontSize: 18),),
+      ],
+    );
   }
 }
 

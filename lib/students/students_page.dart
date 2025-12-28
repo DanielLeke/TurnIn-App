@@ -53,13 +53,31 @@ class SubmisssionForm extends StatelessWidget {
 }
 
 class SubmissionContent extends StatelessWidget {
-  const SubmissionContent({
-    super.key,
-  });
+  const SubmissionContent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Content",
+          style: TextStyle(fontFamily: 'Sans Serif', fontSize: 18),
+        ),
+        TextFormField(
+          decoration: InputDecoration(border: OutlineInputBorder()),
+          keyboardType: TextInputType.multiline,
+          maxLines: 10,
+          validator: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Content is required';
+            }
+            return null;
+          },
+          onSaved: (newValue) {},
+        ),
+      ],
+    );
   }
 }
 

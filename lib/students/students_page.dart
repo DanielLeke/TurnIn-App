@@ -61,6 +61,7 @@ class SubmissionTitle extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("Title", style: TextStyle(fontFamily: 'Sans Serif', fontSize: 18)),
+        SizedBox(height: 10),
         TextFormField(
           decoration: InputDecoration(border: OutlineInputBorder()),
           validator: (value) {

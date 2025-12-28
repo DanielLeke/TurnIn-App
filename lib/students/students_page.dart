@@ -49,7 +49,7 @@ class SubmisssionForm extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [SubmissionTitle(), SubmissionContent(), SubmitBtn()],
+        children: [SubmissionTitle(), SubmissionContent(), SubmitBtn(), CancelBtn()],
       ),
     );
   }
@@ -159,7 +159,6 @@ class CancelBtn extends StatelessWidget {
           "Cancel",
           style: TextStyle(
             letterSpacing: 0.7,
-            color: Colors.white,
             fontWeight: FontWeight.bold,
             fontSize: 17,
             fontFamily: 'Sans Serif',

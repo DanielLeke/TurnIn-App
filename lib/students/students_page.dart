@@ -12,9 +12,7 @@ class StudentsPage extends StatelessWidget {
       body: AlertDialog(
         title: Text("New Submission"),
         backgroundColor: Colors.white,
-        content: Column(children: [
-          ],
-        ),
+        content: SubmisssionForm(),
       ),
     );
   }
@@ -31,6 +29,19 @@ class StudentsPage extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class SubmisssionForm extends StatelessWidget {
+  const SubmisssionForm({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(child: Column(
+      
+    ),);
   }
 }
 

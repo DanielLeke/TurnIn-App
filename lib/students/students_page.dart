@@ -19,11 +19,7 @@ class StudentsPage extends StatelessWidget {
             ),
           ),
           backgroundColor: Colors.white,
-          content: SizedBox(
-            height: 600,
-            width: 700,
-            child: SubmisssionForm()
-          ),
+          content: SizedBox(height: 600, width: 700, child: SubmisssionForm()),
         ),
       ),
     );
@@ -53,7 +49,7 @@ class SubmisssionForm extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [SubmissionTitle(), SubmissionContent()],
+        children: [SubmissionTitle(), SubmissionContent(), SubmitBtn()],
       ),
     );
   }
@@ -136,7 +132,7 @@ class SubmitBtn extends StatelessWidget {
             color: Colors.white,
             fontWeight: FontWeight.bold,
             fontSize: 17,
-            fontFamily: 'Sans Serif'
+            fontFamily: 'Sans Serif',
           ),
         ),
       ),

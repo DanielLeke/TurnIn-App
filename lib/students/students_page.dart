@@ -9,16 +9,22 @@ class StudentsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: studentsAppBar(),
-      body: AlertDialog(
-        title: Text(
-          "New Submission",
-          style: TextStyle(
-            fontFamily: 'Sans Serif',
-            fontWeight: FontWeight.bold,
+      body: Center(
+        child: AlertDialog(
+          title: Text(
+            "New Submission",
+            style: TextStyle(
+              fontFamily: 'Sans Serif',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          backgroundColor: Colors.white,
+          content: SizedBox(
+            height: 600,
+            width: 700,
+            child: SubmisssionForm()
           ),
         ),
-        backgroundColor: Colors.white,
-        content: SubmisssionForm(),
       ),
     );
   }
@@ -45,6 +51,7 @@ class SubmisssionForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [SubmissionTitle(), SubmissionContent()],
       ),
@@ -64,6 +71,7 @@ class SubmissionContent extends StatelessWidget {
           "Content",
           style: TextStyle(fontFamily: 'Sans Serif', fontSize: 18),
         ),
+        SizedBox(height: 10),
         TextFormField(
           decoration: InputDecoration(border: OutlineInputBorder()),
           keyboardType: TextInputType.multiline,
@@ -102,6 +110,36 @@ class SubmissionTitle extends StatelessWidget {
           onSaved: (newValue) {},
         ),
       ],
+    );
+  }
+}
+
+class SubmitBtn extends StatelessWidget {
+  const SubmitBtn({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 43,
+      width: double.infinity,
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.blue[700],
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+        ),
+        child: Text(
+          "Submit",
+          style: TextStyle(
+            letterSpacing: 0.7,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 17,
+            fontFamily: 'Sans Serif'
+          ),
+        ),
+      ),
     );
   }
 }

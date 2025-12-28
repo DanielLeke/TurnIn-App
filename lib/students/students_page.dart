@@ -9,19 +9,7 @@ class StudentsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: studentsAppBar(),
-      body: Center(
-        child: AlertDialog(
-          title: Text(
-            "New Submission",
-            style: TextStyle(
-              fontFamily: 'Sans Serif',
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          backgroundColor: Colors.white,
-          content: SizedBox(height: 600, width: 850, child: SubmisssionForm()),
-        ),
-      ),
+      body: MakeSubmissionView(),
     );
   }
 
@@ -36,6 +24,29 @@ class StudentsPage extends StatelessWidget {
           icon: Icon(Icons.logout, color: Colors.grey),
         ),
       ],
+    );
+  }
+}
+
+class MakeSubmissionView extends StatelessWidget {
+  const MakeSubmissionView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: AlertDialog(
+        title: Text(
+          "New Submission",
+          style: TextStyle(
+            fontFamily: 'Sans Serif',
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.white,
+        content: SizedBox(height: 600, width: 850, child: SubmisssionForm()),
+      ),
     );
   }
 }

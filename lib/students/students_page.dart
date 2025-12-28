@@ -36,13 +36,12 @@ class SubmissionsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-        height: 300,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [CreateSubmissionBtn()],
-        ),
-      ),
+      child: Column(
+        children: [
+          CreateSubmissionBtn(),
+          Expanded(child: ListView(),)
+        ],
+      )
     );
   }
 }

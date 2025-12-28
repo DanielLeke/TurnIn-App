@@ -19,7 +19,7 @@ class StudentsPage extends StatelessWidget {
             ),
           ),
           backgroundColor: Colors.white,
-          content: SizedBox(height: 600, width: 700, child: SubmisssionForm()),
+          content: SizedBox(height: 600, width: 850, child: SubmisssionForm()),
         ),
       ),
     );
@@ -127,6 +127,36 @@ class SubmitBtn extends StatelessWidget {
         ),
         child: Text(
           "Submit",
+          style: TextStyle(
+            letterSpacing: 0.7,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 17,
+            fontFamily: 'Sans Serif',
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CancelBtn extends StatelessWidget {
+  const CancelBtn({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 43,
+      width: double.infinity,
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.grey[100],
+          foregroundColor: Colors.black,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+        ),
+        child: Text(
+          "Cancel",
           style: TextStyle(
             letterSpacing: 0.7,
             color: Colors.white,

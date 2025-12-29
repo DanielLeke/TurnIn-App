@@ -39,10 +39,31 @@ class SubmissionsView extends StatelessWidget {
       child: Column(
         children: [
           CreateSubmissionBtn(),
-          Expanded(child: ListView(),)
+          Submissions()
         ],
       )
     );
+  }
+}
+
+class Submissions extends StatelessWidget {
+  const Submissions({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(child: ListView(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(5)
+          ),
+          child: Column()
+        )
+      ],
+    ),);
   }
 }
 

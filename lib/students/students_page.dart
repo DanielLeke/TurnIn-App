@@ -62,7 +62,28 @@ class Submission extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(5),
       ),
-      child: Column(children: [SubmissionContent()]),
+      child: Column(children: [SubmissionContent(), SubmissionStatus()]),
+    );
+  }
+}
+
+class SubmissionStatus extends StatelessWidget {
+  const SubmissionStatus({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Row(
+        children: [
+          Icon(Icons.alarm, color: Colors.amber),
+          SizedBox(width: 10),
+          Text(
+            'Pending Review',
+            style: TextStyle(color: Colors.amber, fontSize: 16),
+          ),
+        ],
+      ),
     );
   }
 }

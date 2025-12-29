@@ -36,7 +36,9 @@ class SubmissionsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(children: [CreateSubmissionBtn(), Submissions()]),
+      child: Column(
+        children: [CreateSubmissionBtn(), SizedBox(height: 20), Submissions()],
+      ),
     );
   }
 }
@@ -60,19 +62,13 @@ class Submission extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(5),
       ),
-      child: Column(
-        children: [
-          SubmissionContent(),
-        ],
-      ),
+      child: Column(children: [SubmissionContent()]),
     );
   }
 }
 
 class SubmissionContent extends StatelessWidget {
-  const SubmissionContent({
-    super.key,
-  });
+  const SubmissionContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +84,7 @@ class SubmissionContent extends StatelessWidget {
       ),
       subtitle: Text(
         'Hello there. This is a test submission. Hopefully, I can use this to see how the ui will look like.',
-        style: TextStyle(color: Colors.grey),
+        style: TextStyle(color: Colors.grey, fontSize: 16),
       ),
     );
   }

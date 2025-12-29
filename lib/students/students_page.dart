@@ -36,44 +36,60 @@ class SubmissionsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          CreateSubmissionBtn(),
-          Submissions()
-        ],
-      )
+      child: Column(children: [CreateSubmissionBtn(), Submissions()]),
     );
   }
 }
 
 class Submissions extends StatelessWidget {
-  const Submissions({
-    super.key,
-  });
+  const Submissions({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(child: ListView(
-      children: [
-        Submission()
-      ],
-    ),);
+    return Expanded(child: ListView(children: [Submission()]));
   }
 }
 
 class Submission extends StatelessWidget {
-  const Submission({
-    super.key,
-  });
+  const Submission({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(5)
+        borderRadius: BorderRadius.circular(5),
       ),
-      child: Column()
+      child: Column(
+        children: [
+          SubmissionContent(),
+        ],
+      ),
+    );
+  }
+}
+
+class SubmissionContent extends StatelessWidget {
+  const SubmissionContent({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(
+        "Test Submission",
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          fontFamily: 'Sans Serif',
+          fontSize: 20,
+        ),
+      ),
+      subtitle: Text(
+        'Hello there. This is a test submission. Hopefully, I can use this to see how the ui will look like.',
+        style: TextStyle(color: Colors.grey),
+      ),
     );
   }
 }

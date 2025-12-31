@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:turninapp/reviewers/reviewer_page.dart';
 import 'package:turninapp/students/students_page.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StudentsPage(),
+      home: ReviewerPage(),
     );
   }
 }

@@ -76,7 +76,7 @@ class SubmissionStatus extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       child: Row(
         children: [
-          Icon(Icons.alarm, color: Colors.amber),
+          Icon(Icons.schedule, color: Colors.amber),
           SizedBox(width: 10),
           Text(
             'Pending Review',

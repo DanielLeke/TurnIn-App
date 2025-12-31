@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:turninapp/students/submissions.dart';
+import 'package:turninapp/students/views/submissions.dart';
 import 'package:turninapp/students/views/create_submission.dart';
 import 'package:turninapp/students/views/nosubmissions.dart';
 

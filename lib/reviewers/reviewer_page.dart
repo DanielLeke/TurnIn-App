@@ -13,15 +13,15 @@ class ReviewerPage extends StatelessWidget {
 
   AppBar reviewerAppBar() {
     return AppBar(
-    backgroundColor: Colors.white,
-    title: Text('Reviewer Dashboard'),
-    leading: Icon(Icons.fact_check, color: Colors.blue[700]),
-    actions: [
-      IconButton(
-        onPressed: () {},
-        icon: Icon(Icons.logout, color: Colors.grey),
-      ),
-    ],
-  );
+      backgroundColor: Colors.white,
+      title: Text('Reviewer Dashboard'),
+      leading: Icon(Icons.fact_check, color: Colors.blue[700]),
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.logout, color: Colors.grey),
+        ),
+      ],
+    );
   }
 }
